@@ -1,0 +1,976 @@
+
+\documentclass[11pt]{article}
+\usepackage[margin=2cm]{geometry}
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet} \renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{bibunits}
+\usepackage{longtable}
+\usepackage{titlesec}
+\hypersetup{
+    colorlinks = true,
+    linkcolor = {green},
+}
+\usepackage{verbatim}
+\usepackage{lineno}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+
+\parindent 0pt
+\parskip 1ex
+
+\newenvironment{instruction}{%
+    \begin{tcolorbox}[breakable,colback=red!5,colframe=red,title=Instruction]%
+	}{%
+    	\end{tcolorbox}%
+	}
+
+% begin add subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+%\def\toclevel@paragraph{6}
+\def\toclevel@subparagraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+% end add subsubsubsection
+
+% \linenumbers
+
+\title{Enabling Naturalistic, Long-Duration and Continual Experimentation with
+Advanced Machine Learning Methods}
+
+\begin{document}
+\defaultbibliography{longDurationExperimentation,neuroEthology,machineLearning,signalProcessing,bonsai,spikeSorting}
+
+\tableofcontents
+
+\pagebreak
+
+\section{Summary}
+
+\begin{instruction}
+Word limit: 550
+
+In plain English, provide a summary we can use to identify the most suitable
+experts to assess your application.
+
+We usually make this summary publicly available on external-facing websites,
+therefore do not include any confidential or sensitive information. Make it
+suitable for a variety of readers, for example:
+
+\begin{itemize}
+	\item opinion-formers
+	\item policymakers
+	\item the public
+	\item the wider research community
+\end{itemize}
+
+Guidance for writing a summary
+
+Clearly describe your proposed work in terms of:
+
+\begin{itemize}
+	\item context
+	\item the challenge the project addresses
+	\item aims and objectives
+	\item potential applications and benefits
+\end{itemize}
+
+\end{instruction}
+
+% \input{summary}
+
+\pagebreak
+\section{Core team}
+
+\begin{instruction}
+List the key members of your team and assign them roles from the following:
+
+\begin{itemize}
+	\item project lead (PL)
+	\item project co-lead (UK) (PcL)
+	\item specialist
+	\item grant manager professional enabling staff
+	\item research and innovation associate
+	\item technician
+	\item researcher co-lead (RcL)
+\end{itemize}
+
+Only list one individual as project lead.
+
+UKRI has introduced a new addition to the ‘Specialist’ role type. Public
+contributors such as people with lived experience can now be added to an
+application.
+
+Find out more about UKRI’s core team roles in funding applications.
+
+\end{instruction}
+
+% \input{coreTeam}
+
+\pagebreak
+\section{Application questions}
+
+\subsection{Vision}
+
+\begin{instruction}
+
+Word limit: 1,700
+
+What are you hoping to achieve with your proposed resource?
+
+What the assessors are looking for in your response
+
+Explain how your proposed resource:
+
+\begin{enumerate}
+
+	\item is of excellent quality and importance within or beyond the field(s)
+or area(s), and has the potential to advance current understanding, or generate
+new knowledge, thinking or discovery within or beyond the field or area
+
+	\item is timely given current trends, context, and needs
+
+	\item impacts world-leading research, society, the economy, or the
+environment
+
+\end{enumerate}
+
+Include the following in your statement:
+
+\begin{enumerate}
+
+	\item the uniqueness and expected added value of the proposed resource to
+the UK bioscience research community and infrastructure landscape
+
+	\item how the resource relates to past and current resources in the subject
+area in both the UK and abroad
+
+	\item full details of the resource and an overview of the associated
+objectives.  Details on how these objectives are delivered should be included
+in the ‘Approach’ section
+
+	\item a description of the types of research that will be enabled by the
+resource
+
+	\item consideration of the potential impact on the scientific community and
+other possibly dependent resources if the resource did not exist
+
+\end{enumerate}
+
+In your vision, you should also clearly identify which of the following categories
+your proposed resource falls under, and expand on the relevant points raised
+below:
+
+\begin{enumerate}
+
+	\item establishment of a new and innovative resource that will be
+beneficial to a broader BBSRC user base. Explain why a new resource is needed
+and what unique and important features it will offer
+
+	\item maturation and subsequent maintenance of a project-based resource
+into a community-based one. Briefly explain the background to the resource,
+current usage, proposed changes and the benefits this will lead to for the
+research community
+
+	\item further development or essential maintenance of an existing community
+resource, with well-established access mechanisms. Explain current usage and
+how this project will increase its relevance, quality and utility. For example,
+by enabling the resource to support FAIR (findable, accessible, interoperable,
+reusable) principles, or by enabling new uses, such as metadata enrichment for
+machine learning and AI approaches
+
+	\item association, or integration, of distinct resources. Explain current
+usage and how the proposed plans will create an upgraded resource with a
+greater value than the sum of the parts
+
+\end{enumerate}
+
+References may be included within this section.
+You may demonstrate elements of your responses in visual form if relevant.
+Further details are provided in the Funding Service.
+\end{instruction}
+
+% \begin{bibunit}[unsrtveryabbrv]
+% \input{vision}
+% \putbib
+% \end{bibunit}
+
+\pagebreak
+\subsection{Approach}
+
+\begin{instruction}
+
+Word limit: 4,400
+
+How are you going to deliver your proposed work?
+
+What the assessors are looking for in your response
+
+Explain how you have designed your approach so that it:
+
+is effective and appropriate to achieve your objectives
+
+\begin{itemize}
+
+	\item is feasible, and comprehensively identifies any risks to delivery and
+	how they will be managed
+
+	\item uses a clearly written and transparent methodology (if applicable)
+
+	\item summarises the previous work and describes how this will be built
+	upon and progressed (if applicable)
+
+	\item will maximise translation of outputs into outcomes and impacts
+
+	\item describes how your, and if applicable your team’s, research
+	environment (in terms of the place and relevance to the project) will
+	contribute to the success of the work
+
+\end{itemize}
+
+Include the following when describing your approach:
+
+\begin{itemize}
+
+	\item measurable targets against which the outcome of the work will be
+	assessed
+
+	\item significant technical details for the development, maintenance or
+	enhancement of the resource, indicating how this is of internationally
+	exceptional quality
+
+	\item data management approach, including plans for data collection,
+	storage, curation, access, sharing, and long-term sustainability. Clearly
+	outline how the resource will comply with relevant data standards, ensure
+	interoperability, and support reuse by the wider research community.
+	Information already included in the ‘Data management and sharing’ section
+	does not need to be duplicated
+
+	\item any proposed research efforts and how they directly facilitate
+	development of the resource (if applicable)
+
+	\item if the focus is on maintaining an existing resource instead of
+	suggesting further development, provide evidence of why significant
+	upgrades are not required at this time and detail why the resource needs
+	continued support to maintain world-leading functionality (if applicable)
+
+\end{itemize}
+
+Describe the specific contribution of each applicant to the proposed resource:
+
+\begin{itemize}
+
+	\item their scientific contributions, for example, research field and
+	specialist knowledge, experience, resource management expertise, technical
+	and data analysis expertise
+
+	\item their role and responsibilities, for example, managerial, leadership,
+	mentoring
+
+	\item references to specific work packages are recommended
+
+	\item highlight where applicants will work collaboratively to deliver
+	specific project requirements
+
+	\item include clear time commitments for each applicant
+
+\end{itemize}
+
+There is no need to duplicate information included in the ‘Applicant and team
+capability to deliver’ section.
+
+References may be included within this section.
+
+You may demonstrate elements of your responses in visual form if relevant. A
+project Gantt chart identifying appropriate deliverables, responsibilities, and
+time points for each objective, is recommended. Further details on uploading
+images are provided in the Funding Service.
+
+\end{instruction}
+
+% \begin{bibunit}[unsrtveryabbrv]
+% \input{approach}
+% \pagebreak
+% \putbib
+% \end{bibunit}
+
+\pagebreak
+\subsection{Community demand: letters (or emails) of support}
+
+\begin{instruction}
+Letters (or emails) of support demonstrating community demand are mandatory
+for BBR.
+
+Upload a single PDF of maximum 8MB containing a maximum of 10 letters or
+emails of support. These should be uploaded in English or Welsh only. Enter
+the words ‘attachment supplied’ in the text box.
+
+What the assessors are looking for in your response
+
+The letters should give an indication of community demand for the resource in
+question, demonstrating the breadth of research and the high-quality science
+relevant to BBSRC remit that the resource would underpin.
+
+Add the following details for each letter:
+
+\begin{itemize}
+
+	\item the organisation name (searchable via a drop-down list or enter the
+organisation’s details manually, as applicable)
+
+	\item contact name of the signatory
+
+\end{itemize}
+
+Letters of support aimed at demonstrating community demand should:
+
+\begin{itemize}
+
+	\item outline the uniqueness and expected added value of the proposed
+resource to the UK bioscience research community and infrastructure landscape
+
+	\item clearly explain the impact and benefit of the proposed resource on
+the writer’s research and the associated community
+
+	\item if possible, explain where this supported research has already
+demonstrated or could have potential for particular scientific, economic or
+societal impact
+
+	\item help to demonstrate the breadth of the relevant user community
+
+\end{itemize}
+
+Letters of support that fail to do so, in particular template letters
+indicating generic support without identifying a particular usage, are of
+negligible value for the assessment and should not be submitted. Carefully
+chosen letters containing relevant evidence of the requirement or benefit to be
+gained, are of greater value than large numbers of letters.
+
+The Funding Service will provide document upload details when you apply.
+
+\end{instruction}
+
+\pagebreak
+\subsection{Applicant and team capability to deliver}
+
+\begin{instruction}
+Word limit: 1,650
+
+Why are you the right individual or team to successfully deliver the proposed
+work?
+
+What the assessors are looking for in your response
+
+Please ensure the current job titles of the core team members are included
+here to ensure eligibility can be established for the core team roles assigned.
+Find out more about
+\href{https://www.ukri.org/publications/roles-in-funding-applications/roles-in-funding-applications-eligibility-responsibilities-and-costings-guidance/}{UKRI’s
+core team roles in funding applications} and our
+\href{https://www.ukri.org/councils/bbsrc/guidance-for-applicants/check-if-youre-eligible-for-funding/applicants-and-co-applicants/}{eligibility
+guidance}.
+
+Evidence of how you, and if relevant your team, have:
+
+\begin{itemize}
+
+    \item the relevant experience (appropriate to career stage) to deliver the proposed
+work
+
+    \item the right balance of skills and expertise to cover the proposed work
+
+    \item the appropriate leadership and management skills to deliver the work and
+your approach to develop others
+
+    \item contributed to developing a positive research environment and wider
+community
+
+\end{itemize}
+
+You may demonstrate elements of your responses in visual form if relevant.
+
+Further details are provided in the Funding Service.
+
+The word limit for this section is 1,650 words: 1,150 words to be used for R4RI
+modules (including references) and, if necessary, a further 500 words for
+Additions.
+
+Use the Résumé for Research and Innovation (R4RI) format to showcase the range
+of relevant skills you and, if relevant, your team (project and project
+co-leads, researchers, technicians, specialists, partners and so on) have and
+how this will help deliver the proposed work. You can include individuals’
+specific achievements but only choose past contributions that best evidence
+their ability to deliver this work.
+
+Complete this section using the R4RI module headings listed. Use each heading
+once and include a response for the whole team, see the
+\href{https://www.ukri.org/apply-for-funding/before-you-apply/resume-for-research-and-innovation-r4ri-guidance/}{UKRI
+guidance on R4RI}. You should consider how to balance your answer, and
+emphasise where appropriate the key skills each team member brings:
+
+\begin{itemize}
+
+	\item contributions to the generation of new ideas, tools, methodologies, or
+knowledge
+
+	\item the development of others and maintenance of effective working relationships
+
+	\item contributions to the wider research and innovation community
+
+	\item contributions to broader research or innovation users and audiences and
+towards wider societal benefit
+
+\end{itemize}
+
+Additions
+
+Provide any further details relevant to your application. This section is
+optional and can be up to 500 words. You should not use it to describe
+additional skills, experiences, or outputs, but you can use it to describe any
+factors that provide context for the rest of your R4RI (for example, details of
+career breaks if you wish to disclose them).
+
+Complete this as a narrative. Do not format it like a CV.
+
+There is no need to duplicate information included in the ‘Approach’ section.
+
+References may be included within this section.
+
+The roles in funding applications policy has descriptions of the different
+project roles.
+
+\end{instruction}
+
+% \input{team}
+
+\pagebreak
+\subsection{Project partners}
+
+\begin{instruction}
+
+Add details about any project partners’ contributions. If there are no project
+partners, you can indicate this on the Funding Service.
+
+A project partner is a collaborating organisation who will have an integral
+role in the proposed research. This may include direct (cash) or indirect
+(in-kind) contributions such as expertise, staff time or use of facilities.
+Project partners may be in industry, academia, third sector or government
+organisations in the UK or overseas, including partners based in the EU.
+
+If you are applying via the IPA or LINK scheme, please include details of
+industry partners here.
+
+If applying under the BBSRC-NSF lead agency scheme, please include details
+of your US partner here.
+
+Add the following project partner details:
+
+\begin{itemize}
+
+    \item the organisation name and address (searchable via a drop-down list or enter
+the organisation’s details manually, as applicable)
+
+    \item the project partner contact name and email address
+
+    \item the type of contribution (direct or in-direct) and its monetary value
+
+\end{itemize}
+
+If a detail is entered incorrectly and you have saved the entry, remove the
+specific project partner record and re-add it with the correct information.
+
+For audit purposes, UKRI requires formal collaboration agreements to be put in
+place if an award is made.
+
+\end{instruction}
+
+% \input{projectPartners}
+
+\pagebreak
+\subsection{Project partners: statement of support}
+
+\begin{instruction}
+
+Word limit: 3,000
+
+Upload a single PDF containing the letters or emails of support from each
+partner you named in the ‘Project partners’ section. These should be uploaded
+in English or Welsh only.
+
+What the assessors are looking for in your response
+
+Enter the words ‘attachment supplied’ in the text box, or if you do not have any
+project partners enter ‘N/A’. Each statement should:
+
+\begin{itemize}
+
+    \item confirm the partner’s commitment to the project
+
+    \item clearly explain the value, relevance, and possible benefits of the
+    work to them
+
+    \item describe any additional value that they bring to the project
+
+	\item have a page limit of two sides A4 per partner
+
+\end{itemize}
+
+The Funding Service will provide document upload details when you apply.
+
+If you do not have any project partners, you will be able to indicate this in
+the Funding Service.
+
+Ensure you have prior agreement from project partners so that, if you are
+offered funding, they will support your project as indicated in the ‘Project
+partners’ section.
+
+For audit purposes, UKRI requires formal collaboration agreements to be put in
+place if an award is made.
+
+\end{instruction}
+% \input{projectPartnersStmtOfSupport}
+
+\pagebreak
+\subsection{Management strategy}
+
+\begin{instruction}
+
+Word limit: 500
+
+How do you plan to manage the resource?
+
+What the assessors are looking for in your response
+
+Provide details on:
+
+\begin{itemize}
+
+	\item governance arrangements appropriate for the oversight and successful
+delivery of the project’s complexity
+
+	\item the project’s management and advisory structure
+
+	\item the approach to project and risk management, and the monitoring
+strategy for tracking progress of the proposed programme
+
+	\item how demand and access requests will be managed, and what support will
+be provided to the users of the resource
+
+	\item the proposed membership of the advisory board and how it will be
+used. An advisory board is required and is to be independent from both the
+academic institutions and project partners involved in the proposal
+
+	\item how the resource user perspective and their needs will be considered,
+including how feedback will be sought and subsequently used to inform the
+management of the resource
+
+\end{itemize}
+
+You may demonstrate elements of your responses in visual form if relevant.
+Further details are provided in the Funding Service.
+
+\end{instruction}
+
+\pagebreak
+\subsection{Data management and sharing}
+
+\begin{instruction}
+
+Word limit: 1,500
+
+How will you manage and share data collected or acquired through the
+proposed resource?
+
+What the assessors are looking for in your response
+
+Provide a data management plan using the BBR DMP template structure,
+provided in the ‘Supporting documents’ section, that clearly details how you will
+comply with UKRI’s published data sharing policy, which includes detailed
+guidance notes.
+
+\end{instruction}
+
+% \input{dataManagement}
+
+\pagebreak
+\subsection{Resources and cost justification}
+
+\begin{instruction}
+
+Word limit: 1,000
+
+What will you need to deliver your proposed work and how much will it cost?
+
+What the assessors are looking for in your response
+
+The FEC of your project can be up to a maximum of £2 million. We will fund
+80\% of the FEC. For example, if the FEC cost of your project is equal £2
+million, we will fund £1.6 million and your research organisation will be
+expected to fund £400,000.
+
+Please note, equipment over £10,000 is funded by BBSRC at 50\%. The
+Funding Service does not currently have the ability to record this. For this round
+we ask that you include equipment over £10,000 in ‘Exceptions’ at 100\% of
+cost. We will cut this to 50\% at award. You must ensure you have prior
+agreement from your research organisation to fund the remaining 50\%.
+
+Justify the application’s more costly resources, in particular:
+
+\begin{itemize}
+
+	\item project staff significant
+
+	\item travel for field work or collaboration (but not regular travel
+between collaborating organisations or to conferences)
+
+	\item any equipment that will cost more than £10,000
+
+	\item any consumables beyond typical requirements, or that are required in
+exceptional quantities
+
+	\item all facilities and infrastructure costs
+
+	\item all resources that have been costed as ‘Exceptions’
+
+\end{itemize}
+
+Assessors are not looking for detailed costs or a line-by-line breakdown of all
+project resources. Overall, they want you to demonstrate how the resources
+you anticipate needing for your proposed work:
+
+\begin{itemize}
+
+	\item are comprehensive, appropriate, and justified
+
+	\item represent the optimal use of resources to achieve the intended
+outcomes
+
+	\item maximise potential outcomes and impacts
+
+\end{itemize}
+
+\end{instruction}
+
+% \input{resources}
+
+\pagebreak
+\subsection{Trusted research and innovation (TR\&I)}
+
+\begin{instruction}
+
+Word limit: 500
+
+Does your proposed work relate to UKRI’s Trusted Research and Innovation
+principles?
+
+What the assessors are looking for in your response
+
+Demonstrate how your proposed work relates to UKRI’s Trusted Research and
+Innovation principles including:
+
+\begin{itemize}
+
+	\item list any dual-use (both military and non-military) applications to your research
+
+	\item if this project is relevant to one or more of the 17 areas of the UK National
+Security and Investment (NSI) Act, please list the area(s)
+
+	\item please read the academic export control guidance and confirm if an export
+control licence is required for this project and the status of any application(s)
+
+	\item if your project involves any items or substances on the UK strategic export
+control list, please provide a list
+
+\end{itemize}
+
+In this context, you should be aware that the UK National Security \& Investment
+Act, 2021 includes Data Infrastructure, and other biosciences-relevant areas,
+within the 17 sensitive areas of the economy.
+
+We may ask you to provide additional TR\&I information later, in line with UKRI
+TR\&I principles and funding terms and conditions (RGC 2.6.2, 2.7.1 and 2.7.2).
+
+\end{instruction}
+
+% \input{trustedResearchAndInnovation}
+
+\pagebreak
+\subsection{Ethics and responsible research and innovation (RRI)}
+
+\begin{instruction}
+
+Word limit: 500
+
+What are the ethical or RRI implications and issues relating to the proposed
+work? If you do not think that the proposed work raises any ethical or RRI
+issues, explain why.
+
+What the assessors are looking for in your response
+
+Demonstrate that you have identified and evaluated:
+
+\begin{itemize}
+
+	\item the relevant ethical or responsible research and innovation considerations
+
+	\item how you will manage these considerations
+
+\end{itemize}
+
+If you are collecting or using data you should identify:
+
+\begin{itemize}
+
+	\item any legal and ethical considerations of collecting, releasing or
+storing the data (including consent, confidentiality, anonymisation, security
+and other ethical considerations and, in particular, strategies to not preclude
+further reuse of data)
+
+	\item formal information standards that your proposed work will comply with
+
+\end{itemize}
+
+Additional sub-questions (to be answered only if appropriate) relating to
+research involving:
+
+\begin{itemize}
+
+	\item animals
+
+	\item human participants
+
+	\item genetically modified organisms
+
+\end{itemize}
+
+You may demonstrate elements of your responses in visual form if relevant.
+Further details are provided in the Funding Service.
+
+\end{instruction}
+
+% \input{rri}
+
+\pagebreak
+\subsection{Genetic and biological risk}
+
+\begin{instruction}
+
+Word limit: 700
+
+Does your proposed research involve any genetic or biological risk?
+
+What the assessors are looking for in your response
+
+In respect of animals, plants or microbes, are you proposing to:
+
+\begin{itemize}
+
+	\item use genetic modification as an experimental tool, like studying gene
+function in a genetically modified organism
+
+	\item release genetically modified organisms
+
+	\item ultimately develop commercial and industrial genetically modified
+outcomes
+
+\end{itemize}
+
+If yes, provide the name of any required approving body and state if approval
+is already in place. If it is not, provide an indicative timeframe for
+obtaining the required approval.
+
+Identify the organism or organisms as a plant, animal or microbe and specify
+the species and which of the three categories the research relates to.
+
+Identify the genetic and biological risks resulting from the proposed research,
+their implications, and any mitigation you plan on taking. Assessors will want
+to know you have considered the risks and their implications to justify that
+any identified risks do not outweigh any benefits of the proposed research.
+
+If this does not apply to your proposed work, you will be able to indicate this
+in the Funding Service.
+
+\end{instruction}
+
+\pagebreak
+\subsection{Research involving the use of animals}
+
+\begin{instruction}
+
+Does your proposed research involve the use of vertebrate animals or other
+organisms covered by the Animals Scientific Procedures Act?
+
+What the assessors are looking for in your response
+
+If you are proposing research that requires using animals, download and
+complete the Animals Scientific Procedures Act template (DOCX, 74KB),
+which contains all the questions relating to research using vertebrate animals or
+other Animals (Scientific Procedures) Act 1986 regulated organisms.
+
+Save it as a PDF, ensuring it is no larger than 8MB. The Funding Service will
+provide document upload details when you apply.
+
+If this does not apply to your proposed work, you will be able to indicate
+this in the Funding Service.
+
+\end{instruction}
+
+\pagebreak
+\subsection{Conducting research with animals overseas}
+
+\begin{instruction}
+
+Word limit: 700
+
+Will any of the proposed animal research be conducted overseas?
+
+What the assessors are looking for in your response
+
+If you are proposing to conduct overseas research, it must be conducted in
+accordance with welfare standards consistent with those in the UK, as in
+Responsibility in the use of animals in bioscience research. Ensure all
+named applicants in the UK and overseas are aware of this requirement.
+Ensure all named applicants in the UK and overseas are aware of this
+requirement.
+
+If your application proposes animal research to be conducted overseas, you
+must provide a statement in the text box. Depending on the species involved,
+you may also need to upload a completed template for each species listed.
+
+Statement
+
+Provide a statement to confirm that:
+
+\begin{itemize}
+
+	\item all named applicants are aware of the requirements and have agreed to
+abide by them
+
+	\item this overseas research will be conducted in accordance with welfare
+standards consistent with the principles of UK legislation
+
+	\item the expectation set out in Responsibility in the use of animals in bioscience
+research will be applied and maintained
+
+	\item appropriate national and institutional approvals are in place
+
+\end{itemize}
+
+Templates
+
+Overseas studies proposing to use non-human primates, cats, dogs, equines or
+pigs will be assessed during NC3Rs review of research applications. Provide
+the required information by completing the template from the question
+‘Research involving the use of animals’.
+
+For studies involving other species, such as:
+
+\begin{itemize}
+
+	\item rodents
+
+	\item rabbits
+
+	\item sheep
+
+	\item goats
+
+	\item pigs
+
+	\item cattle
+
+	\item xenopus laevis and xenopus tropicalis
+
+	\item zebrafish
+
+\end{itemize}
+
+Select, download, and complete the relevant Word checklist or checklists by
+exploring NC3Rs checklist for the use of animals overseas.
+
+Save your completed template as a PDF and upload to the Funding Service. If
+you use more than one checklist template, save it as a single PDF.
+The Funding Service will provide document upload details when you apply.
+
+If conducting research with animals overseas does not apply to your proposed
+work, you will be able to indicate this in the Funding Service.
+
+\end{instruction}
+
+\pagebreak
+\subsection{Research involving human participation}
+
+\begin{instruction}
+
+Word limit: 700
+
+Will the project involve the use of human subjects or their personal information?
+What the assessors are looking for in your response
+
+If you are proposing research that requires the involvement of human subjects,
+provide the name of any required approving body and whether approval is
+already in place.Justify the number and the diversity of the participants involved, as well as any
+procedures.
+
+Provide details of any areas of substantial or moderate severity of impact.
+
+If this does not apply to your proposed work, you will be able to indicate this in
+the Funding Service.
+
+\end{instruction}
+
+\pagebreak
+\subsection{Research involving human tissues or biological samples}
+
+\begin{instruction}
+
+Word limit: 700
+
+Does your proposed research involve the use of human tissues, or biological
+samples?
+
+What the assessors are looking for in your response
+
+If you are proposing work that involves human tissues or biological samples,
+provide the name of any required approving body and whether approval is
+already in place.
+
+Justify the use of human tissue or biological samples specifying the nature and
+quantity of the material to be used and its source.
+
+If this does not apply to your proposed work, you will be able to indicate this in
+the Funding Service.
+
+\end{instruction}
+
+\end{document}
