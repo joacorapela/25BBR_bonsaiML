@@ -1,27 +1,37 @@
 % Bonsai
 
-Bonsai is a free and open-source visual reactive programming language widely
-used for experimental control in neuroscience. Designed for performance,
-flexibility, and ease of use, Bonsai enables scientists with little or no
-programming background to build high-performance data acquisition and control
-systems. With more than 7,000 downloads annually, nearly 100 citations per year
-of the core paper, and over 1,000 new users in 2024 alone, Bonsai has become
-the most widely adopted software platform in systems neuroscience. Its success
-demonstrates the transformative role that sustainable, community-driven
-research software can play in accelerating discovery.
+\href{https://bonsai-rx.org/}{Bonsai} is a free and open-source visual reactive
+programming language widely used for experimental control in neuroscience.
+Designed for performance, flexibility, and ease of use, Bonsai enables
+scientists with little or no programming background to build high-performance
+data acquisition and control systems. With more than 7,000 downloads annually,
+nearly 100 citations per year of the core paper, and over 1,000 new users in
+2024 alone, Bonsai has become the most widely adopted software platform in
+systems neuroscience. Its success demonstrates the transformative role that
+sustainable, community-driven research software can play in accelerating
+discovery.
 
 % Bonsai.ML
 % BBSRC grant
 
-A central priority of UKRI is the application of artificial intelligence in
-bioscience. In 2022 we recognised that integrating machine learning (ML) into
-Bonsai could be transformative for experimental neuroscience. With BBSRC
-support (BB/W019132/1), we developed Bonsai.ML, which extends Bonsai with
-state-of-the-art ML methods. These include Linear Dynamical Systems, Hidden
-Markov Models, Deep Neural Networks, and a Point-Process Decoder. Embedding
-these models directly in Bonsai's reactive programming environment enables
-adaptive, data-driven experimental designs that were previously out of reach
-for many laboratories.
+A central priority of UKRI is the application of
+\href{https://www.ukri.org/what-we-do/browse-our-areas-of-investment-and-support/artificial-intelligence-in-bioscience/}{artificial
+intelligence in bioscience}. In 2022 we recognised that integrating machine
+learning (ML) into Bonsai could be transformative for experimental
+neuroscience. With BBSRC support
+(\href{https://gow.bbsrc.ukri.org/grants/AwardDetails.aspx?FundingReference=BB\%2FW019132\%2F1}{BB/W019132/1}),
+we developed Bonsai.ML, which extends Bonsai with state-of-the-art ML methods.
+These include
+\href{https://bonsai-rx.org/machinelearning/examples/examples/LinearDynamicalSystems/README.html}{Linear
+Dynamical Systems},
+\href{https://bonsai-rx.org/machinelearning/examples/examples/HiddenMarkovModels/README.html}{Hidden
+Markov Models},
+\href{https://bonsai-rx.org/machinelearning/examples/examples/Torch/NeuralNetsTrainedOnline/README.html}{Deep
+Neural Networks}, and a
+\href{https://bonsai-rx.org/machinelearning/examples/examples/PointProcessDecoder/DecodePositionFromHippocampusSortedUnits/README.html}{Point-Process
+Decoder}. Embedding these models directly in Bonsai's reactive programming
+environment enables adaptive, data-driven experimental designs that were
+previously out of reach for many laboratories.
 
 % Challenges
 
@@ -48,7 +58,88 @@ of Bonsai.ML to neuroscience independently.
 Second, we will work hand-in-hand with experimental neuroscientists to address
 challenging neuroscience problems with Bonsai.ML, and together demonstrate
 transformative applications of Bonsai.ML to neuroscience experimental control.
+%
+% By reading or watching use cases of applications of Bonsai.ML methods in
+% intelligent experimental control, experimental neuroscientists could realise the
+% utility of these methods for their own experiments and adopt Bonsai.ML.
 
-\subsection{Collaborations}
+\subsubsection{Collaborations}
 
+Collaborations with experimental groups are essential for the creation of
+machine learning methods targeted to biological applications. These
+collaborations benefit both the experimental and the methods development
+partners.
+%
+The former partner benefits with the machine learning expertise of the methods
+partner to interrogate its experimental data.
+%
+The latter partner benefits by having access to state-of-the-art experimental
+data, and with expertise on the significance and potential of applications of
+the machine learning method in biological problems.
+%
+These collaborations are essential to maximise the power of
+\href{https://www.ukri.org/what-we-do/browse-our-areas-of-investment-and-support/artificial-intelligence-in-bioscience/}{artificial
+intelligence in bioscience}.
 
+During the creation of Bonsai.ML, we attempted a few collaborations with
+experimental neuroscience groups as, from our experience disseminating Bonsai,
+we know that these collaborations are essential to maximize uptake of software
+for neuroscientists.
+%
+In some cases we obtained promising initial results, but achieving the full
+goals of the collaboration required further developments, that we did not have
+time to pursue.
+%
+In other collaborations, initial results were not satisfactory, but we did not
+dedicated further time to understand the problems that yielded poor results,
+since we were focused on integrating machine learning functionality into
+Bonsai.ML.
+
+Now that Bonsai.ML has been created, and that it contains core real-time
+machine learning methods, we aim at developing collaborations with experimental
+neuroscience groups, use methods already integrated into Bonsai.ML to jointly
+tackle their intelligent experimental control problems, and use the results of
+this collaboration to create a detailed user guides demonstrating the use of
+Bonsai.ML to solve state-of-the-art intelligent experimental control problems.
+
+% We will collaborate with experimental neuroscientists in using Bonsai.ML
+% methods to address together some of their challenging problems in intelligent
+% experimental control.
+%
+These collaborations will last between four and eight months, and are designed
+to allow sufficient time to customise and optimise the Bonsai.ML methods for the
+unique needs of the experimental collaborators, build new Bonsai.ML methods when
+needed, and write high-quality use cases documenting outputs of the
+collaborations.
+
+The focus of these collaborations will be on the \emph{application} of
+Bonsai.ML methods, and not on scientific research.
+%
+We have selected collaborations where Bonsai.ML methods can have a direct impact,
+without requiring much scientific research, and where the impact can be clearly
+demonstrated.
+
+Outputs of these collaborations will be described in detailed uses cases in
+Bonsai.ML's documentation.
+%
+In addition, when applications of Bonsai.ML's methods lead to new scientific
+discoveries, details of these applications will be presented in research
+publications.
+%
+However, even if a collaboration does not yield a new finding, the Bonsai.ML
+use case will still be created, as it will describe in detail the application
+of a Bonsai.ML method to a state-of-the-art neuroscience problem, and should
+motivate Bonsai users to use the method in other scientific problems.
+
+Below we summarise the collaboration we will develop, which are detailed in the
+Section~\ref{sec:approach} section.
+
+\subsubsubsection*{Collaboration~1: real-time neural latents visualisation}
+
+\paragraph{Collaborator:} Josh Siegle, senior scientist, Allen Institute for
+Neural Dynamics, US.
+
+\paragraph{Methods:} Gaussian linear dynamical system (already integrated),
+Poisson linear dynamical system (to be integrated).
+
+\paragraph{Duration:} 5 months.
