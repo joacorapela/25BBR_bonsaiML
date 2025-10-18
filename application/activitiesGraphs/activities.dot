@@ -16,7 +16,6 @@ digraph {
   dissemination -> "Bonsai\nconference";
 
   collaborations [shape=box];
-<<<<<<< HEAD
   collaborations -> "RT forecasting\nposition,HO\nAS";
   collaborations -> "RT HMM+Logistic Regression\npredicting visit duration\nAeon";
   collaborations -> "RT decoding HO\nfrom restrosplenial cortex\nDC,TB";
