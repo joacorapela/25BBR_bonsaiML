@@ -194,7 +194,7 @@ spikes.}
     \item\textbf{Summary:} We have already integrated into Bonsai.ML a fast
         implementation of a clusterless point-process decoder~\citep[i.e., a
         decoder that does not require spike sorting and is suitable for
-        real-time usage,][]{denovellisEtAl21}. However, the current
+        real-time usage;][]{denovellisEtAl21}. However, the current
         implementation of this decoder cannot decode unsorted spikes from
         Neuropixels probes.
         %
@@ -202,17 +202,26 @@ spikes.}
         for high-channel-count electrophysiological recordings.
         %
         We will extend our implementation of the decoder to operate on
-        Neuropixels recordings, and demonstrate this extension to decode rat
+        Neuropixels recordings, and demonstrate this extension decoding rat
         positions from hippocampal spikes in a honeycomb
         maze~\citep{woodEtAl18}, and mice positions from striatal spikes in a
         sequence learning task~\citep{thompsonEtAl24}.
 
+        Our collaborator require decoding latencies of less than ten
+        milliseconds for their experiments. We will compare the performance of
+        the clusterless point-process decoder with that of the same decoder
+        using sorted spikes.
+        %
+        Spike sorting will be performed with a real-time spike sorter that we
+        will develop as part of this project.
+
     \item\textbf{Methods:} Clusterless point-process decoder of animal position
-        from hippocampal activity recorded with tetrodes recordings (already
-        integrated), real-time clusterless point-process decoder of animal
-        position from hippocampal recordings with Neuropixels probes
-        (extension to Neuropixels to be developed; real-time constrains to be
-        tested).
+        from spiking activity recorded with tetrodes recordings (already
+        integrated); real-time clusterless point-process decoder of animal
+        position from spiking activity recorded with Neuropixels probes
+        (extension to Neuropixels to be developed; real-time performance
+        optimisations to be developed); real-time spike sorter (to be
+        developed).
 
 \end{itemize}
 
@@ -231,3 +240,12 @@ models.
 
 As part of collaboration 3, we will develop a \textbf{clusterless version of
 the point-process decoder able to process recordings from Neuropixels probes}.
+%
+We will also develop a \textbf{real-time spike sorter for Neuropixels probes}.
+%
+It will allow us to compare the performance of the point process decoder with
+clusterless and sorted spikes..
+%
+In addition, a real-time spike sorter will allow us to characterize and
+manipulate in real time neural processes at the single cell level, like cell
+tuning, phase precession, head direction or firing rate adaptation.
