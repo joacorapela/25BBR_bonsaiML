@@ -16,6 +16,7 @@ digraph {
   dissemination -> "Bonsai\nconference";
 
   collaborations [shape=box];
+<<<<<<< HEAD
   collaborations -> "RT forecasting\nposition,HO\nAS";
   collaborations -> "RT HMM+Logistic Regression\npredicting visit duration\nAeon";
   collaborations -> "RT decoding HO\nfrom restrosplenial cortex\nDC,TB";
@@ -23,10 +24,13 @@ digraph {
   collaborations -> "RT decoding\nposition\n(striatum)\nET,MSJ";
   collaborations -> "RT neural\nlatents\nvisualisation\nJS";
   collaborations -> "close-loop\noptogenetics\ncontrol\nGS";
+  integrations -> "RT spike sorting";
 
   integrations [shape=box];
   integrations -> "deep\nforecasters";
   integrations -> "RT logistic\nregression";
+  integrations -> "CLOCTools";
+
   integrations -> "RT decoding\nfrom Neuropixels";
   integrations -> "RT HO\ndecoder";
   integrations -> "integration\nCLOCTools";

@@ -47,21 +47,18 @@ cannot immediately appreciate how these methods can aid their experimentation.
 
 % Solutions
 
-We will accelerate the uptake and impact of Bonsai.ML through two complementary
-strategies.
-%
-First, we will substantially revamp Bonsai.ML's documentation and strengthen
-the current training and dissemination activities. This will empower
-experimental neuroscientists to explore and identify ``killer applications''
-of Bonsai.ML to neuroscience independently.
-%
-Second, we will work hand-in-hand with experimental neuroscientists to address
-challenging neuroscience problems with Bonsai.ML, and together demonstrate
-transformative applications of Bonsai.ML to neuroscience experimental control.
+We will accelerate the uptake and impact of Bonsai.ML by working hand-in-hand
+with experimental neuroscientists to address challenging neuroscience problems
+with Bonsai.ML, and create detailed use cases demonstrating transformative
+applications of Bonsai.ML to neuroscience experimental control.
 %
 % By reading or watching use cases of applications of Bonsai.ML methods in
-% intelligent experimental control, experimental neuroscientists could realise the
-% utility of these methods for their own experiments and adopt Bonsai.ML.
+% intelligent experimental control, experimental neuroscientists could realise
+% the utility of these methods for their own experiments and adopt Bonsai.ML.
+
+These collaboration will mostly use machine learning methods already integrated
+into Bonsai.ML, but some of them will require new methods that we will add to
+Bonsai.ML and expand its functionality.
 
 \subsubsection{Collaborations}
 
@@ -70,37 +67,37 @@ machine learning methods targeted to biological applications. These
 collaborations benefit both the experimental and the methods development
 partners.
 %
-The former partner benefits with the machine learning expertise of the methods
-partner to interrogate its experimental data.
+The former partner benefits from the machine learning expertise to interrogate its experimental data.
 %
-The latter partner benefits by having access to state-of-the-art experimental
-data, and with expertise on the significance and potential of applications of
+The latter partner benefits from state-of-the-art experimental
+data, and from biological expertise on the significance and potential of applications of
 the machine learning method in biological problems.
 %
-These collaborations are essential to maximise the power of
+These collaborations are essential to maximise the impact of
 \href{https://www.ukri.org/what-we-do/browse-our-areas-of-investment-and-support/artificial-intelligence-in-bioscience/}{artificial
 intelligence in bioscience}.
 
 During the creation of Bonsai.ML, we attempted a few collaborations with
 experimental neuroscience groups as, from our experience disseminating Bonsai,
-we know that these collaborations are essential to maximize uptake of software
-for neuroscientists.
+we learned that collaborations are essential to maximize uptake of software for
+neuroscientists.
 %
 In some cases we obtained promising initial results, but achieving the full
 goals of the collaboration required further developments, that we did not have
 time to pursue.
 %
-In other collaborations, initial results were not satisfactory, but we did not
-dedicated further time to understand the problems that yielded poor results,
-since we were focused on integrating machine learning functionality into
-Bonsai.ML.
+In other collaborations, initial results were not satisfactory, but we could
+not dedicate further time to understand the problems that yielded poor
+performance, since we were focused on integrating machine learning
+functionality into Bonsai.ML.
 
-Now that Bonsai.ML has been created, and that it contains core real-time
-machine learning methods, we aim at developing collaborations with experimental
-neuroscience groups, use methods already integrated into Bonsai.ML to jointly
-tackle their intelligent experimental control problems, and use the results of
-this collaboration to create a detailed user guides demonstrating the use of
-Bonsai.ML to solve state-of-the-art intelligent experimental control problems.
+Now that Bonsai.ML has been created and that it contains core real-time machine
+learning methods, we will focus on developing collaborations with experimental
+neuroscience groups, use methods already integrated into Bonsai.ML, or develop
+new ones, to jointly tackle their intelligent experimental control problems,
+and use the results of these collaborations to create a detailed user guides
+demonstrating the use of Bonsai.ML to solve state-of-the-art intelligent
+experimental control problems.
 
 % We will collaborate with experimental neuroscientists in using Bonsai.ML
 % methods to address together some of their challenging problems in intelligent
@@ -129,17 +126,126 @@ publications.
 However, even if a collaboration does not yield a new finding, the Bonsai.ML
 use case will still be created, as it will describe in detail the application
 of a Bonsai.ML method to a state-of-the-art neuroscience problem, and should
-motivate Bonsai users to use the method in other scientific problems.
+motivate Bonsai users to apply the method to related scientific problems.
 
 Below we summarise the collaboration we will develop, which are detailed in the
-Section~\ref{sec:approach} section.
+Section~\ref{sec:approach} below.
 
-\subsubsubsection*{Collaboration~1: real-time neural latents visualisation}
+\subsubsubsection*{Collaboration~1: real-time neural latents visualisation for
+high-channel-count electrophysiology recordings with
+linear dynamical systems}
 
-\paragraph{Collaborator:} Josh Siegle, senior scientist, Allen Institute for
+\begin{description}
+
+    \item[Collaborator:] Dr.~Josh Siegle, senior scientist, Allen Institute for
 Neural Dynamics, US.
 
-\paragraph{Methods:} Gaussian linear dynamical system (already integrated),
+    \item[Summary:]
+
+        Visualisation is central to scientific inquiry, especially in
+        neuroscience. Yet, modern high-density recordings from hundreds or
+        thousands of electrodes pose major challenges for clear, real-time
+        visualisation. At the Gatsby Unit, we pioneered single-trial
+        dimensionality reduction with latent-variable models~\citep{yuEtAl09},
+        and extended these approaches in later work
+        \citep[e.g.,][]{dunckerAndSahani18}, supported by open-source software
+        (\href{https://github.com/joacorapela/svGPFA}{svGPFA}).  However, all
+        current latent-variable methods operate offline, after data collection.
+        In this project we will integrate state-space models into Bonsai.ML, to
+        estimate and visualise latent variables online, during
+        high-channel-count recordings.
+
+    \item[Methods:] Gaussian linear dynamical system (already integrated),
 Poisson linear dynamical system (to be integrated).
 
-\paragraph{Duration:} 5 months.
+\end{description}
+
+\subsubsubsection*{Collaboration~2: real-time forecasting animal behavior for
+zero-lag stimulus presentation in augmented-reality small-animal experiments.}
+
+\begin{itemize}
+
+    \item\textbf{Collaborator:} Prof.~Aman Saleem,
+        \href{https://www.saleemlab.com/}{Saleem Lab}, University College London,
+        UK.
+
+    \item\textbf{Summary:} In augmented reality experiments, particularly in
+        neuroscience, precise stimulus timing is critical, yet unavoidable
+        system delays mean that visual stimuli often appear slightly later than
+        intended. This latency is especially problematic when linking neural
+        activity to sensory input or behavior. To address this, we will use
+        algorithms that forecast animal position and head orientation, allowing
+        stimuli to be pre-rendered and displayed in synchrony with the
+        subject’s actual position and head orientation.
+
+    \item\textbf{Methods:} Gaussian linear dynamical system (already integrated),
+deep learning forecasters (to be integrated).
+
+\end{itemize}
+
+\subsubsubsection*{Collaboration~3: real-time decoding of position from neural
+spikes.}
+
+\begin{itemize}
+
+    \item\textbf{Collaborator:} Prof.~John O'Keefe and Prof.~Marcus Stephenson
+        Jones, Sainsbury Wellcome Center, University College London, UK.
+
+    \item\textbf{Summary:} We have already integrated into Bonsai.ML a fast
+        implementation of a clusterless point-process decoder~\citep[i.e., a
+        decoder that does not require spike sorting and is suitable for
+        real-time usage;][]{denovellisEtAl21}. However, the current
+        implementation of this decoder cannot decode unsorted spikes from
+        Neuropixels probes.
+        %
+        This is a sever limitation, since Neuropixels are becoming the standard
+        for high-channel-count electrophysiological recordings.
+        %
+        We will extend our implementation of the decoder to operate on
+        Neuropixels recordings, and demonstrate this extension decoding rat
+        positions from hippocampal spikes in a honeycomb
+        maze~\citep{woodEtAl18}, and mice positions from striatal spikes in a
+        sequence learning task~\citep{thompsonEtAl24}.
+
+        Our collaborator require decoding latencies of less than ten
+        milliseconds for their experiments. We will compare the performance of
+        the clusterless point-process decoder with that of the same decoder
+        using sorted spikes.
+        %
+        Spike sorting will be performed with a real-time spike sorter that we
+        will develop as part of this project.
+
+    \item\textbf{Methods:} Clusterless point-process decoder of animal position
+        from spiking activity recorded with tetrodes recordings (already
+        integrated); real-time clusterless point-process decoder of animal
+        position from spiking activity recorded with Neuropixels probes
+        (extension to Neuropixels to be developed; real-time performance
+        optimisations to be developed); real-time spike sorter (to be
+        developed).
+
+\end{itemize}
+
+\subsubsection{New Bonsai.ML methods}
+
+As part of collaboration~1, we will integrate into Bonsai.ML the \textbf{Poisson
+linear dynamical systems} model, which infers latents assuming that spike
+counts follow a Poisson distribution. This distribution is better for spike
+count than the Gaussian distribution used in the Gaussian linear dynamical
+system model already integrated into Bonsai.ML
+
+For collaboration~2, we will evaluate, and possibly integrate into Bonsai.ML,
+\textbf{deep learning forecasters}, as these forecasters are able to generate
+superior long-horizon predictions than forecasters based on linear dynamical
+models.
+
+As part of collaboration 3, we will develop a \textbf{clusterless version of
+the point-process decoder able to process recordings from Neuropixels probes}.
+%
+We will also develop a \textbf{real-time spike sorter for Neuropixels probes}.
+%
+It will allow us to compare the performance of the point process decoder with
+clusterless and sorted spikes..
+%
+In addition, a real-time spike sorter will allow us to characterize and
+manipulate in real time neural processes at the single cell level, like cell
+tuning, phase precession, head direction or firing rate adaptation.

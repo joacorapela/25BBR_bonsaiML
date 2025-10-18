@@ -8,7 +8,7 @@
 \usepackage[scaled=0.92]{helvet} \renewcommand{\familydefault}{\sfdefault}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage[numbers]{natbib}
+\usepackage{natbib}
 \usepackage{bibunits}
 \usepackage{longtable}
 \usepackage{titlesec}
@@ -66,11 +66,13 @@
 
 % \linenumbers
 
+\defaultbibliographystyle{apalike}
+\defaultbibliography{physiology,latentsVariablesModels,neuralDecoding,navigation,replay}
+
 \title{Enabling Naturalistic, Long-Duration and Continual Experimentation with
 Advanced Machine Learning Methods}
 
 \begin{document}
-\defaultbibliography{longDurationExperimentation,neuroEthology,machineLearning,signalProcessing,bonsai,spikeSorting}
 
 \tableofcontents
 
@@ -221,7 +223,7 @@ You may demonstrate elements of your responses in visual form if relevant.
 Further details are provided in the Funding Service.
 \end{instruction}
 
-\begin{bibunit}[unsrtveryabbrv]
+\begin{bibunit}[apalike]
 \input{vision}
 \putbib
 \end{bibunit}
@@ -320,7 +322,7 @@ images are provided in the Funding Service.
 
 \end{instruction}
 
-% \begin{bibunit}[unsrtveryabbrv]
+% \begin{bibunit}
 % \input{approach}
 % \pagebreak
 % \putbib
