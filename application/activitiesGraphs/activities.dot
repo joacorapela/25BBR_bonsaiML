@@ -16,32 +16,24 @@ digraph {
   dissemination -> "Bonsai\nconference";
 
   collaborations [shape=box];
-  collaborations -> "RT 2-photon\nCa++ imaging\nTMF,SK";
-  collaborations -> "RT GLM-HMM\nKH,IBL";
-  collaborations -> "RT decoding HO\nTB";
   collaborations -> "RT forecasting\nposition,HO\nAS";
-  collaborations -> "RT decoding\nposition\n(hippocampus)\nNB,ZJ";
-  collaborations -> "RT decoding\nposition\n(striatum)\nMSJ";
-  collaborations -> "RT neural\nlatents\nvisualisation\nwith LDS\nJS";
-  collaborations -> "RT neural\nlatents\nvisualisation\nwith PLDS\nJS";
-  collaborations -> "close-loop\noptogenetics\ncontrol\nGS";
-  collaborations -> "RT decoding\nsleep stage\nfrom LFP\nJH";
-  collaborations -> "RT HMM\nalzheimer mice\nLK";
-  collaborations -> "RT learning\nof NN learning dynamics\nSL";
   collaborations -> "RT HMM+Logistic Regression\npredicting visit duration\nAeon";
+  collaborations -> "RT decoding HO\nfrom restrosplenial cortex\nDC,TB";
+  collaborations -> "RT decoding\nposition\n(hippocampus)\nED,JO";
+  collaborations -> "RT decoding\nposition\n(striatum)\nET,MSJ";
+  collaborations -> "RT neural\nlatents\nvisualisation\nJS";
+  collaborations -> "close-loop\noptogenetics\ncontrol\nGS";
 
   integrations [shape=box];
-  integrations -> "RT 2-photon\nCa++ imaging";
-  integrations -> "RT LFP\nprocessing";
-  integrations -> "RT GLM-HMM";
-  integrations -> "CLOCTools";
-  integrations -> "PLDS";
-  integrations -> "Infer.NET";
-  integrations -> "real-time\nspike sorting";
-  integrations -> "RT adaptive estimation\nof psychometric curves";
+  integrations -> "deep\nforecasters";
+  integrations -> "RT logistic\nregression";
   integrations -> "RT decoding\nfrom Neuropixels";
+  integrations -> "RT HO\ndecoder";
+  integrations -> "integration\nCLOCTools";
+  integrations -> "PLDS";
+  integrations -> "real-time\nspike sorting";
 
-  integrations [label=<integrations/<br/>developments>]
+  integrations [label=integrations]
 
   maintainability [shape=box];
   maintainability -> "Infer.NET";
