@@ -65,7 +65,8 @@ transformative applications of Bonsai.ML to neuroscience experimental control.
 
 These collaboration will mostly use machine learning methods already integrated
 into Bonsai.ML, but some of them will require new methods that we will add to
-Bonsai.ML and expand its functionality.
+Bonsai.ML, expand its functionality and make Bonsai.ML useful to a broader user
+base.
 
 \subsubsection{Collaborations}
 
@@ -116,12 +117,14 @@ unique needs of the experimental collaborators, build new Bonsai.ML methods when
 needed, and write high-quality use cases documenting outputs of the
 collaborations.
 
-The focus of these collaborations will be on the \emph{application} of
+The focus of these collaborations will be on \emph{applications} of
 Bonsai.ML methods, and not on scientific research.
 %
-We have selected collaborations where Bonsai.ML methods can have a direct impact,
-without requiring much scientific research, and where the impact can be clearly
-demonstrated.
+For each collaboration there is a well-defined real-time ML methodological
+need. We will provide a Bonsai.ML method addressing this need, with
+corresponding documentation, and let to our research collaborators to use the
+method to address their scientific problems. Thus, our collaborators will act
+as beta-testers of the packages provided for the collaboration.
 
 Outputs of these collaborations will be described in detailed uses cases in
 Bonsai.ML's documentation.
@@ -139,7 +142,7 @@ Below we summarise the collaboration we will develop, which are detailed in the
 Section~\ref{sec:approach} below.
 
 \subsubsubsection*{Collaboration~1: real-time neural latents visualisation for
-high-channel-count electrophysiology recordings with
+high-channel-count electrophysiology recordings in mice with
 linear dynamical systems}
 
 \begin{description}
@@ -167,7 +170,7 @@ Poisson linear dynamical system (to be integrated).
 
 \end{description}
 
-\subsubsubsection*{Collaboration~2: real-time forecasting animal behavior for
+\subsubsubsection*{Collaboration~2: real-time forecasting for
 zero-lag stimulus presentation in augmented-reality small-animal experiments.}
 
 \begin{itemize}
@@ -190,8 +193,8 @@ deep learning forecasters (to be integrated).
 
 \end{itemize}
 
-\subsubsubsection*{Collaboration~3: real-time decoding of position from neural
-spikes.}
+\subsubsubsection*{Collaboration~3: real-time decoding of mouse and rat
+positions from neural spikes.}
 
 \begin{itemize}
 
@@ -205,7 +208,7 @@ spikes.}
         implementation of this decoder cannot decode unsorted spikes from
         Neuropixels probes.
         %
-        This is a sever limitation, since Neuropixels are becoming the standard
+        This is a severe limitation, since Neuropixels are becoming the standard
         for high-channel-count electrophysiological recordings.
         %
         We will extend our implementation of the decoder to operate on
@@ -229,6 +232,33 @@ spikes.}
         (extension to Neuropixels to be developed; real-time performance
         optimisations to be developed); real-time spike sorter (to be
         developed).
+
+\end{itemize}
+
+\subsubsubsection*{Collaboration~4: real-time decoding of mouse head
+orientation from neural spikes in retrosplenial cortex.}
+
+\begin{itemize}
+
+    \item\textbf{Collaborator:} Prof.~Tiago Branco and Dr.~Dario Campagner,
+        Sainsbury Wellcome Center, University College London, UK.
+
+    \item\textbf{Summary:} We will add to Bonsai.ML a decoder of orientation
+        from spiking activity. It will be demonstrated to decode head-shelter
+        angle with
+        recordings from the retrosplenial cortex and superior colliculus of mice escaping to their
+        shelter~\citep{campagnerEtAl22}, and to detect confluence sinks with
+        recordings from the hippocampus of rats navigating to goal locations in
+        the honecomb maze~\cite{woodEtAl18}.
+        %
+        This decoder will allow to determine, in real time, from spiking activity in
+        retrosplenial cortex, when a mouse has developed a preference for a
+        subgoal and optogenetically deactivate related brain regions to
+        establish causal effects and discover neural circuits responsible for
+        innate scape responses.
+
+    \item\textbf{Method:} Clusterless point-process decoder of animal head
+        orientation with Neuropixels recordings in mice (to be developed).
 
 \end{itemize}
 
@@ -256,3 +286,6 @@ clusterless and sorted spikes..
 In addition, a real-time spike sorter will allow us to characterize and
 manipulate in real time neural processes at the single cell level, like cell
 tuning, phase precession, head direction or firing rate adaptation.
+
+For collaboration 4 we will build a \textbf{head orientation decoder from
+clusterless spikes}.
