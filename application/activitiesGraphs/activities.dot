@@ -32,7 +32,6 @@ digraph {
 
   integrations -> "RT decoding\nfrom Neuropixels";
   integrations -> "RT HO\ndecoder";
-  integrations -> "integration\nCLOCTools";
   integrations -> "PLDS";
   integrations -> "real-time\nspike sorting";
 
