@@ -18,8 +18,9 @@ digraph {
   collaborations [shape=box];
   collaborations -> "RT forecasting\nposition,HO\nAS";
   collaborations -> "RT HMM+Logistic Regression\npredicting visit duration\nAeon";
-  collaborations -> "RT decoding HO\nfrom restrosplenial cortex\nDC,TB";
-  collaborations -> "RT decoding\nposition\n(hippocampus)\nED,JO";
+  collaborations -> "RT decoding HO\nfrom restrosplenial cortex\nDC,TBr";
+  collaborations -> "RT decoding\ntheta sweeps\nED,JO";
+  collaborations -> "RT decoding\nposition\n(hippocampus,\n entorhinal cortex)\nTBe";
   collaborations -> "RT decoding\nposition\n(striatum)\nET,MSJ";
   collaborations -> "RT neural\nlatents\nvisualisation\nJS";
   collaborations -> "close-loop\noptogenetics\ncontrol\nGS";
@@ -33,9 +34,8 @@ digraph {
   integrations -> "RT decoding\nfrom Neuropixels";
   integrations -> "RT HO\ndecoder";
   integrations -> "PLDS";
-  integrations -> "real-time\nspike sorting";
-
-  integrations [label=integrations]
+  integrations -> "RT spike\nsorting";
+  integrations -> "RT spectral\nanalysis";
 
   maintainability [shape=box];
   maintainability -> "Infer.NET";
