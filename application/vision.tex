@@ -142,8 +142,7 @@ Below we summarise the collaboration we will develop, which are detailed in the
 Section~\ref{sec:approach} below.
 
 \subsubsubsection*{Collaboration~1: real-time neural latents visualisation for
-high-channel-count electrophysiology recordings in mice with
-linear dynamical systems}
+high-channel-count electrophysiology recordings.}
 
 \begin{description}
 
@@ -170,8 +169,8 @@ Poisson linear dynamical system (to be integrated).
 
 \end{description}
 
-\subsubsubsection*{Collaboration~2: real-time forecasting for
-zero-lag stimulus presentation in augmented-reality small-animal experiments.}
+\subsubsubsection*{Collaboration~2: real-time position and head orientation forecasting for
+zero-lag stimulus presentation in augmented-reality small-animal behavioral experiments.}
 
 \begin{itemize}
 
@@ -193,13 +192,13 @@ deep learning forecasters (to be integrated).
 
 \end{itemize}
 
-\subsubsubsection*{Collaboration~3: real-time decoding of mouse and rat
-positions from neural spikes.}
+\subsubsubsection*{Collaboration~3: real-time decoding of mouse positions from
+neural spikes in the striatum.}
 
 \begin{itemize}
 
-    \item\textbf{Collaborator:} Prof.~John O'Keefe and Prof.~Marcus Stephenson
-        Jones, Sainsbury Wellcome Center, University College London, UK.
+    \item\textbf{Collaborator:} Prof.~Marcus Stephenson Jones, Sainsbury
+        Wellcome Center, University College London, UK.
 
     \item\textbf{Summary:} We have already integrated into Bonsai.ML a fast
         implementation of a clusterless point-process decoder~\citep[i.e., a
@@ -208,22 +207,37 @@ positions from neural spikes.}
         implementation of this decoder cannot decode unsorted spikes from
         Neuropixels probes.
         %
-        This is a severe limitation, since Neuropixels are becoming the standard
-        for high-channel-count electrophysiological recordings.
+        This is a severe limitation, since Neuropixels are becoming the
+        standard for high-channel-count electrophysiological recordings.
         %
         We will extend our implementation of the decoder to operate on
-        Neuropixels recordings, and demonstrate this extension decoding rat
-        positions from hippocampal spikes in a honeycomb
-        maze~\citep{woodEtAl18}, and mice positions from striatal spikes in a
-        sequence learning task~\citep{thompsonEtAl24}.
+        Neuropixels recordings, and demonstrate this extension for decoding
+        mice positions from striatal spikes in a sequence learning
+        task~\citep{thompsonEtAl24}.
 
-        Our collaborator require decoding latencies of less than ten
-        milliseconds for their experiments. We will compare the performance of
-        the clusterless point-process decoder with that of the same decoder
-        using sorted spikes.
+        This project requires decoding latencies of less than five
+        milliseconds. We will compare the performance of the clusterless
+        point-process decoder with that of the same decoder using sorted
+        spikes.
         %
         Spike sorting will be performed with a real-time spike sorter that we
         will develop as part of this project.
+
+        Using a point-process spike sequence learning
+        method~\citep{williamsEtAl20}, our collaborators discovered replay in
+        the striatum, and showed that this replay is independent of the
+        hippocampus~\citep{thompsonEtAl24}. An outstanding question is if the
+        striatal replay is driving procedural memory consolidation. To answer
+        this question, our collaborators will use our online point-process
+        decoder to disrupt replay as soon as it is detected and examine if this
+        disruption affects procedural memory consolidation.
+
+        The Bonsai.ML responsibility in this project will be to develop a
+        low-latency clusterless point process decoder for Neuropixels probes,
+        to build an online spike sorting method, and to assist the
+        collaborators on the use of these methods. The collaborators will be
+        in charged of the application of these methods to address the previous
+        scientific question.
 
     \item\textbf{Methods:} Clusterless point-process decoder of animal position
         from spiking activity recorded with tetrodes recordings (already
@@ -240,25 +254,57 @@ orientation from neural spikes in retrosplenial cortex.}
 
 \begin{itemize}
 
-    \item\textbf{Collaborator:} Prof.~Tiago Branco and Dr.~Dario Campagner,
+    \item\textbf{Collaborator:} Dr.~Jasmine Reggiani and Prof.~Tiago Branco,
         Sainsbury Wellcome Center, University College London, UK.
 
     \item\textbf{Summary:} We will add to Bonsai.ML a decoder of orientation
-        from spiking activity. It will be demonstrated to decode head-shelter
-        angle with
-        recordings from the retrosplenial cortex and superior colliculus of mice escaping to their
-        shelter~\citep{campagnerEtAl22}, and to detect confluence sinks with
-        recordings from the hippocampus of rats navigating to goal locations in
-        the honecomb maze~\cite{woodEtAl18}.
+        from spiking activity. It will be used to decode head-shelter or
+        head-subgoal angle with recordings from the retrosplenial cortex and
+        superior colliculus in mice escaping to shelter in arenas
+        without~\citep{campagnerEtAl23} or with~\citep{shamashEtAl21} a
+        barrier.
         %
-        This decoder will allow to determine, in real time, from spiking activity in
-        retrosplenial cortex, when a mouse has developed a preference for a
-        subgoal and optogenetically deactivate related brain regions to
-        establish causal effects and discover neural circuits responsible for
-        innate scape responses.
+        This decoder will allow to determine, in real time, from spiking
+        activity, how the neural representations of the shelter and subgoals
+        change over time, and to test their causal effect on behavior using
+        optogenetic manipulations, helping to understand the dynamics of neural
+        circuits responsible for innate escape responses.
 
     \item\textbf{Method:} Clusterless point-process decoder of animal head
-        orientation with Neuropixels recordings in mice (to be developed).
+        orientation from Neuropixels recordings in mice (to be developed -- as
+        a modificiation of an already integrated position decoder).
+
+\end{itemize}
+
+\subsubsubsection*{Collaboration~5: real-time detection of remote activations
+and head-orientation decoding in the honeycomb maze.}
+
+\begin{itemize}
+
+    \item\textbf{Collaborators:} Mr.~Eylon Dary, Dr.~Marius Bauza and
+        Prof.~John O'Keefe, Sainsbury Wellcome Center, University College
+        London, UK.
+
+    \item\textbf{Summary:} Our collaborators have created the Honeycomb
+        Maze~\citep{woodEtAl18} to study hippocampal-dependent spatial
+        navigation in rats.
+        %
+        We will partner with them on the use of our
+        \href{https://bonsai-rx.org/machinelearning/examples/examples/PointProcessDecoder/DecodePositionFromHippocampusClusterless/README.html}{position
+        point-process decoder} to explore the existence of within theta
+        trajectories biased toward the current goal direction.
+        %
+        We will also assist them on the use of the orientation decoder to build
+        a novel population-decoding-based method to estimate convergence
+        sinks~\citep{ormondEtAl24}.
+        %
+        Our collaborators are interesting in inferring the above quantities in
+        real time and perturb neural activity online in order to understand
+        causal relations between neural circuits and navigation behavior.
+
+    \item\textbf{Method:} Real-time clusterless point-process decoder for
+        Neuropixels probes (developed for previoius collaboration); real-time
+        spectral analysis method (to be developed).
 
 \end{itemize}
 
@@ -281,7 +327,7 @@ the point-process decoder able to process recordings from Neuropixels probes}.
 We will also develop a \textbf{real-time spike sorter for Neuropixels probes}.
 %
 It will allow us to compare the performance of the point process decoder with
-clusterless and sorted spikes..
+clusterless and sorted spikes.
 %
 In addition, a real-time spike sorter will allow us to characterize and
 manipulate in real time neural processes at the single cell level, like cell
