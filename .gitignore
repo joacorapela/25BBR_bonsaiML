@@ -13,11 +13,12 @@
 *.pdf
 *.csh
 
+old/
+
 loi/*.csh
 loi/loi.*
 !loi/loi.tex
 !loi/loi.pdf
 
 loi/figures/*
-loi/old/*
 
