@@ -1,45 +1,60 @@
 digraph {
   layout=dot;
-  ranksep=0.2;
+  rankdir=TB;   // rows go top -> bottom
+  ranksep=0.6;
+  nodesep=0.4;
 
+  // --- Hubs ---
   documentation [shape=box];
+  training      [shape=box];
+  dissemination [shape=box];
+  collaborations [shape=box];
+  integrations   [shape=box];
+  maintainability [shape=box];
+
+  // --- Force rows (ranks) ---
+  { rank=same; documentation; training; dissemination; }        // Row 1
+  { rank=same; collaborations; }                                // Row 2
+  { rank=same; integrations; maintainability; }                 // Row 3
+
+  // --- Documentation ---
   documentation -> "scikit-learn\nformat";
   documentation -> "for methods\ndevelopers";
   documentation -> "video\ntutorials";
   documentation -> "case studies\nfor intelligent\nexp. control";
 
-  training [shape=box];
+  // --- Training ---
   training -> "Bonsai\ncourse";
 
-  dissemination [shape=box];
+  // --- Dissemination ---
   dissemination -> "Bonsai.ML\npaper";
   dissemination -> "Bonsai\nconference";
 
-  collaborations [shape=box];
+  // --- Collaborations ---
   collaborations -> "RT forecasting\nposition,HO\nAS";
   collaborations -> "RT HMM+Logistic Regression\npredicting visit duration\nAeon";
-  collaborations -> "RT decoding HO\nfrom restrosplenial cortex\nDC,TBr";
+  collaborations -> "RT decoding HO\nfrom retrosplenial cortex\nDC,TBr";
   collaborations -> "RT decoding\ntheta sweeps\nED,JO";
   collaborations -> "RT decoding\nposition\n(hippocampus,\n entorhinal cortex)\nTBe";
   collaborations -> "RT decoding\nposition\n(striatum)\nET,MSJ";
   collaborations -> "RT neural\nlatents\nvisualisation\nJS";
   collaborations -> "close-loop\noptogenetics\ncontrol\nGS";
-  integrations -> "RT spike sorting";
 
-  integrations [shape=box];
+  // --- Integrations ---
   integrations -> "deep\nforecasters";
   integrations -> "RT logistic\nregression";
   integrations -> "CLOCTools";
-
   integrations -> "RT decoding\nfrom Neuropixels";
   integrations -> "RT HO\ndecoder";
   integrations -> "PLDS";
   integrations -> "RT spike\nsorting";
   integrations -> "RT spectral\nanalysis";
 
-  maintainability [shape=box];
+  // --- Maintainability ---
   maintainability -> "Infer.NET";
 
-  /* { rank=same; documentation training community technical } */
+  // --- Invisible edges to enforce vertical ordering between rows ---
+  "Bonsai\ncourse" -> collaborations [style=invis, weight=100, minlen=2];
+  "RT decoding\ntheta sweeps\nED,JO"   -> integrations [style=invis, weight=100, minlen=2];
 
 }
